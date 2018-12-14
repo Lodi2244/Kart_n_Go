@@ -3,6 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+gem 'jquery-rails'
+gem 'jquery', '~> 0.0.1'
+gem 'jquery-ui-rails'
+gem 'momentjs-rails', '>= 2.9'
 gem 'activeadmin'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

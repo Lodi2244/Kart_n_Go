@@ -5,4 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+AdminUser.destroy_all
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+Track.destroy_all
+Track.create(name: "RKC", city:"Paris" )
+
+AvailableTimeSlot.destroy_all
+AvailableTimeSlot.create(hour: DateTime.strptime("11/25/2018", "%m/%d/%Y %H"), track_id: 1)

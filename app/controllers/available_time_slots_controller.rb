@@ -1,9 +1,27 @@
 class AvailableTimeSlotsController < InheritedResources::Base
+  def index
+    @timeslots = AvailableTimeSlot.all
+  end
 
-  private
+  def new
+  end
 
-    def available_time_slot_params
-      params.require(:available_time_slot).permit(:hour, :references)
+  def create
+    @timeslot = AvailableTimeSlot.new(timeslot_params)
+      if @timeslot.save
+        redirect_to available_time_slots_path(@timeslot)
+      else
+        render 'index'
+      end
+  end
+
+    def show
+      @timeslot = AvailableTimeSlot.find(params[:id])
     end
-end
 
+    private
+
+    def timeslot_params
+      params.require(:available_time_slots).permit(:hour, :track_id)
+    end
+  end
