@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @available_time_slot.hour %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @available_time_slot.references %>
+</p>
+
+<%= link_to 'Edit', edit_available_time_slot_path(@available_time_slot) %> |
+<%= link_to 'Back', available_time_slots_path %>

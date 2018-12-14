@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Available Time Slots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hour</th>
+      <th>References</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @available_time_slots.each do |available_time_slot| %>
+      <tr>
+        <td><%= available_time_slot.hour %></td>
+        <td><%= available_time_slot.references %></td>
+        <td><%= link_to 'Show', available_time_slot %></td>
+        <td><%= link_to 'Edit', edit_available_time_slot_path(available_time_slot) %></td>
+        <td><%= link_to 'Destroy', available_time_slot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Available Time Slot', new_available_time_slot_path %>

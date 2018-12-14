@@ -1,0 +1,2 @@
+class AvailableTimeSlot < ApplicationRecord
+end
