@@ -10,8 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
 
   </head>
-
+<header>
+  <%=  render 'shared/navbar'%>
+  <%=  render 'shared/header'%>
+  <%= yield %>
+</header>
   <body>
+    <%=  render 'shared/body'%>
+    <%=  render 'shared/banner'%>  
     <%= yield %>
   </body>
+<footer>
+  <%=  render 'shared/footer'%>
+  <%= yield %>
+</footer>
 </html>
