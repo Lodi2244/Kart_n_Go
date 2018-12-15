@@ -1,3 +1,106 @@
+<section class="slice-lg sct-color-1" id="sct_full_demos">
+    <div class="container">
+        <div class="section-title section-title--style-1 text-center mb-3">
+            <h3 class="section-title-inner heading-2 strong-600 text-normal">
+                <span class="d-block">Réservez votre session en quelques clics !</span>
+            </h3>
+            <span class="section-title-delimiter clearfix d-none"></span>
+        </div>
+        <span class="clearfix"></span>
+        <div class="fluid-paragraph text-center">
+            <div class="text-lg line-height-1_8 c-gray-light strong-300">
+							<%= form_tag tracks_path do %>
+								<div class="main-search-input">
+									<div class="main-search-input-item location ">
+										<div id="autocomplete-container">
+										 <i class="fa fa-map-marker">  <input type="text" placeholder="Paris" id="autocomplete-input-location" ></i><div><%= select_tag :city, options_for_select(@city_options), prompt: "Choisissez une ville", class: "form-control col-2" %></div>
+										</div>
+									</div>
+								<%= submit_tag("Search", class: "button", onclick: "window.location.href='listings-half-screen-map-list.html' ") %>
+								</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+        <span class="space-xs-xl"></span>
+        <div class="">
+            <div class="row">
+                                    <div class="col-md-6 startup agency">
+                    <div class="block block-image-holder mb-5 image-animate-wrapper">
+                        <div class="block-image image-animate--hover">
+                            <a href="demos/startup-agency" target="_blank">
+                                <img src="assets/images/presentation/demos/startup/agency.jpg" class="rounded">
+                            </a>
+                        </div>
+
+                        <div class="card-body px-0">
+                            <div class="">
+                                <a href="html/startup-agency" class="heading heading-4 strong-500" target="_blank">
+                                    Startup Agency                                    </a>
+                                <p class="c-gray-light mt-2 d-none">
+                                    Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="col-md-6 startup app">
+                    <div class="block block-image-holder mb-5 image-animate-wrapper">
+                        <div class="block-image image-animate--hover">
+                            <a href="demos/startup-app" target="_blank">
+                                <img src="assets/images/presentation/demos/startup/app.jpg" class="rounded">
+                            </a>
+                        </div>
+
+                        <div class="card-body px-0">
+                            <div class="">
+                                <a href="html/startup-app" class="heading heading-4 strong-500" target="_blank">
+                                    Startup App                                    </a>
+                                <p class="c-gray-light mt-2 d-none">
+                                    Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="col-md-6 startup app">
+                    <div class="block block-image-holder mb-5 image-animate-wrapper">
+                        <div class="block-image image-animate--hover">
+                            <a href="demos/startup-analitycs" target="_blank">
+                                <img src="assets/images/presentation/demos/startup/analitycs.jpg" class="rounded">
+                            </a>
+                        </div>
+
+                        <div class="card-body px-0">
+                            <div class="">
+                                <a href="html/startup-analitycs" class="heading heading-4 strong-500" target="_blank">
+                                    Startup Analitycs                                    </a>
+                                <p class="c-gray-light mt-2 d-none">
+                                    Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="col-md-6 startup classic">
+                    <div class="block block-image-holder mb-5 image-animate-wrapper">
+                        <div class="block-image image-animate--hover">
+                            <a href="demos/startup-classic" target="_blank">
+                                <img src="assets/images/presentation/demos/startup/classic.jpg" class="rounded">
+                            </a>
+                        </div>
+
+                        <div class="card-body px-0">
+                            <div class="">
+                                <a href="html/startup-classic" class="heading heading-4 strong-500" target="_blank">
+                                    Startup Classic                                    </a>
+                                <p class="c-gray-light mt-2 d-none">
+                                    Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -6,29 +109,6 @@
 <div class="main-search-container">
 	<div class="main-search-inner">
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<h2 id="white">Réservez votre session de karting</h2>
-					<h4 id="whitetoo">en quelques clics </h4>
-
-					<%= form_tag tracks_path do %>
-						<div class="main-search-input">
-							<div class="main-search-input-item location ">
-								<div id="autocomplete-container">
-								 <i class="fa fa-map-marker">  <input type="text" placeholder="Paris" id="autocomplete-input-location" ></i><div><%= select_tag :city, options_for_select(@city_options), prompt: "Choisissez une ville", class: "form-control col-2" %></div>
-								</div>
-							</div>
-
-						<%= submit_tag("Search", class: "button", onclick: "window.location.href='listings-half-screen-map-list.html' ") %>
-						</div>
-					<% end %>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
 
 <!-- script pour l'auto completion
 ================================================== -->
