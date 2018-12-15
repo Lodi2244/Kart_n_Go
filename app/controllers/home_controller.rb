@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   def index
     @timeslots = AvailableTimeSlot.all
+    @tracks = Track.all
+    @city_options = Track.all.map { |c| [c.city, c.id] }
+    @tracks = Track.where(id: params[:city])
   end
 
   def new
