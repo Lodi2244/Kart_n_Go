@@ -13,4 +13,4 @@ Track.destroy_all
 Track.create(name: "RKC", city:"Paris" )
 
 AvailableTimeSlot.destroy_all
-AvailableTimeSlot.create(hour: DateTime.new("%m/%d/%Y %H"), track_id: 1)
+AvailableTimeSlot.create(hour: DateTime.new, track_id: 1)
