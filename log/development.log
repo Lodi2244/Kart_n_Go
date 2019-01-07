@@ -6120,3 +6120,62 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-17 16:52:37 +0100
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mTrack Load (28.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/controllers/home_controller.rb:5
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 60.2ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'ionicons/css/ionicons.min' with type 'text/css'
+Checked in these paths: 
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/app/assets/config
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/app/assets/images
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/app/assets/javascripts
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/app/assets/stylesheets
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/app/assets/videos
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/lib/assets/fonts
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/lib/assets/js
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/lib/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.4.3/app/assets/images
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.4.3/app/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.4.3/app/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.4.3/vendor/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.4.3/vendor/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/formtastic-3.1.5/app/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/momentjs-rails-2.20.1/vendor/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/jquery-ui-rails-6.0.1/app/assets/images
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/node_modules
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/assets
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/vendor
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/lib
+  /Users/elodieletellier/thp/Projet Final /Kart_n_Go/slidebar
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    11:     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  
+app/assets/stylesheets/application.scss:23
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1406183720430755228_70103255251460'
